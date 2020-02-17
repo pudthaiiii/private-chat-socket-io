@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Socket.io Client</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="container">
+		<!-- Join Chat -->
+		<div class="join p-5">
+			<h3>Chat Room</h3>
+			<div class="row">
+				<div class="col-4">
+					<input type="text" class="form-control" name="nickname" placeholder="enter nick name">
+				</div>
+				<div class="col-4">
+					<select class="form-control" name="room-list">
+						<option value="room-01">Room 01</option>
+						<option value="room-02">Room 02</option>
+						<option value="room-03">Room 03</option>
+					</select>
+				</div>
+				<div class="col-4">
+					<button class="btn btn-primary" name="join">Join Room</button>
+				</div>
+			</div>
+		</div>
+		<!-- Chat room -->
+		<div class="join p-5" style="display: none;">
+			<h3>Room: Room 01</h3>
+			<div class="row">
+				<div class="col-8">
+					<div class="border" style="height: 400px; position:relative;">
+						<div class="message p-3" style="height: 320px; overflow: hidden;">
+							<ul class="nav flex-column">
+								<li>nickname: message</li>
+							</ul>
+						</div>
+						<div class="footer border-top" style="width: 100%; position: absolute; bottom: 5px; padding: 5px;">
+							<div class="row">
+								<div class="col-10">
+									<input type="text" class="form-control" name="message">
+								</div>
+								<div class="col-2">
+									<button class="btn btn-success btn-block" name="send">Send</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="border p-3 " style="height: 400px;">
+						<ul class="nav flex-column">
+							<li>Name</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+</body>
+
+</html>
